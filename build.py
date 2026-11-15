@@ -57,7 +57,7 @@ def marker(kind, arg, slug):
     file = file.strip()
     if kind == "IMG":
         if not (D / "img" / file).exists(): fail(f"{slug}: image {file} missing")
-        return f'<figure class="photo"><img src="img/{file}" alt="{cap.strip()}" loading="lazy"><figcaption>{cap.strip()}</figcaption></figure>'
+        return f'<figure class="photo"><img src="img/{file}?v=4k" alt="{cap.strip()}" loading="lazy"><figcaption>{cap.strip()}</figcaption></figure>'
     stem = file.rsplit(".", 1)[0]
     if not (D / "media" / file).exists(): fail(f"{slug}: video {file} missing")
     poster = f' poster="media/{stem}.jpg"' if (D / "media" / f"{stem}.jpg").exists() else ""
@@ -91,7 +91,7 @@ def main():
         hero = ""
         if pg.get("hero"):
             if not (D / "img" / pg["hero"]).exists(): fail(f"{slug}: hero {pg['hero']} missing")
-            hero = f'<figure class="hero-img photo portrait"><img src="img/{pg["hero"]}" alt="{pg.get("hero_caption","")}"><figcaption>{pg.get("hero_caption","")}</figcaption></figure>'
+            hero = f'<figure class="hero-img photo portrait"><img src="img/{pg["hero"]}?v=4k" alt="{pg.get("hero_caption","")}"><figcaption>{pg.get("hero_caption","")}</figcaption></figure>'
         scripts = pg.get("scripts", "")
         out = tpl
         for k, v in {"title": pg["title"], "description": pg.get("description", pg["standfirst"]), "kicker": pg["kicker"],
