@@ -1,0 +1,143 @@
+<figure class="fig" id="fig-sba-stack-build" aria-labelledby="fig-sba-stack-build-t">
+<style>
+#fig-sba-stack-build svg { display: block; width: 100%; height: auto; max-width: 480px; margin: 0 auto; font-family: inherit; }
+#fig-sba-stack-build text { font-family: inherit; font-size: 14px; }
+#fig-sba-stack-build .b { font-weight: 700; }
+#fig-sba-stack-build .on-dark { fill: var(--w-surface); }
+#fig-sba-stack-build .on-light { fill: var(--w-ink); }
+#fig-sba-stack-build .cap { fill: var(--w-ink); opacity: 0; }
+#fig-sba-stack-build .cap-4 { opacity: 1; }
+#fig-sba-stack-build .cap .b { fill: var(--w-navy); }
+#fig-sba-stack-build .total { fill: var(--w-navy); font-weight: 700; }
+#fig-sba-stack-build .loan { fill: var(--w-navy); }
+#fig-sba-stack-build .cash { fill: var(--w-accent); }
+#fig-sba-stack-build .note { fill: var(--w-accent-tint); stroke: var(--w-accent); stroke-width: 1.5; }
+#fig-sba-stack-build .brk { stroke: var(--w-accent); stroke-width: 2; fill: none; stroke-linecap: round; }
+#fig-sba-stack-build .brk-t { fill: var(--w-accent); font-weight: 700; }
+#fig-sba-stack-build .base { stroke: var(--w-line-strong); stroke-width: 2; }
+#fig-sba-stack-build .r { text-anchor: end; }
+</style>
+<p class="fig-title" id="fig-sba-stack-build-t">A $2,000,000 purchase is built in three layers: a 90% bank loan, then 10% down from a seller note and your own cash.</p>
+<p class="fig-sub">Watch the layers land from the bottom up. Full standby means the seller gets no payments while the SBA loan lasts.</p>
+<svg viewBox="0 0 360 392" role="img" aria-label="A stack that builds from the bottom. First an SBA loan of $1,800,000, 90% of a $2,000,000 purchase. Then a seller note of $100,000, 5%, on full standby. Then buyer cash of $100,000, 5%. The seller note and the cash together are the 10% down payment. Illustrative numbers.">
+
+  <g class="cap cap-1">
+    <text x="180" y="22" text-anchor="middle"><tspan class="b">Step 1:</tspan> the SBA loan comes first.</text>
+    <text x="180" y="42" text-anchor="middle">It covers 90% of the price.</text>
+  </g>
+  <g class="cap cap-2">
+    <text x="180" y="22" text-anchor="middle"><tspan class="b">Step 2:</tspan> the seller note goes on top.</text>
+    <text x="180" y="42" text-anchor="middle">On full standby, it counts for up to 5%.</text>
+  </g>
+  <g class="cap cap-3">
+    <text x="180" y="22" text-anchor="middle"><tspan class="b">Step 3:</tspan> your own cash tops it off.</text>
+    <text x="180" y="42" text-anchor="middle">At least 5% must be your own money.</text>
+  </g>
+  <g class="cap cap-4">
+    <text x="180" y="22" text-anchor="middle"><tspan class="b">Done:</tspan> 10% down, 90% borrowed.</text>
+    <text x="180" y="42" text-anchor="middle">Illustrative numbers, not a quote.</text>
+  </g>
+
+  <g class="total-g">
+    <text class="total" x="157" y="88" text-anchor="middle">Total: $2,000,000 purchase price</text>
+  </g>
+
+  <g class="layer layer-cash">
+    <rect class="cash" x="8" y="100" width="298" height="70" rx="6"/>
+    <text class="on-dark b" x="20" y="128">Your cash</text>
+    <text class="on-dark r" x="294" y="128">$100,000</text>
+    <text class="on-dark" x="20" y="150">5%, your own money</text>
+  </g>
+
+  <g class="layer layer-note">
+    <rect class="note" x="8" y="172" width="298" height="68" rx="6"/>
+    <text class="on-light b" x="20" y="200">Seller note</text>
+    <text class="on-light r" x="294" y="200">$100,000</text>
+    <text class="on-light" x="20" y="222">5%, full standby</text>
+  </g>
+
+  <g class="layer layer-loan">
+    <rect class="loan" x="8" y="242" width="298" height="128" rx="6"/>
+    <text class="on-dark b" x="20" y="288">SBA loan</text>
+    <text class="on-dark r" x="294" y="288">$1,800,000</text>
+    <text class="on-dark" x="20" y="310">90% of the price</text>
+    <text class="on-dark" x="20" y="332">Bank loan, partly SBA-guaranteed</text>
+  </g>
+
+  <line class="base" x1="8" y1="371" x2="306" y2="371"/>
+
+  <g class="bracket">
+    <path class="brk" d="M312 104 H322 V236 H312"/>
+    <text class="brk-t" transform="rotate(-90 346 170)" x="346" y="170" text-anchor="middle">10% down</text>
+  </g>
+</svg>
+<figcaption>Illustrative round numbers, not a quote or advice. Closing costs are left out. SBA's minimum is 10% down, with at least 5% from the buyer's own resources, per law-firm and lender summaries of SOP 50 10 8.1 (<a href="https://starfieldsmith.com/2026/09/best-practices-change-of-ownership-transactions-under-sop-50-10-8-1-what-sba-lenders-need-to-know/">Starfield &amp; Smith</a>). Confirm with your lender.</figcaption>
+<script>
+(function () {
+  var root = document.getElementById('fig-sba-stack-build');
+  if (!root) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Reduced motion, or no support: the final state is already showing, so stop here.
+  if (reduce || !('IntersectionObserver' in window) || !root.animate) return;
+
+  var T = 5200;
+  var layers = [
+    { el: root.querySelector('.layer-loan'), at: 300 },
+    { el: root.querySelector('.layer-note'), at: 1500 },
+    { el: root.querySelector('.layer-cash'), at: 2700 }
+  ];
+  var fades = [
+    { el: root.querySelector('.bracket'), at: 3900 },
+    { el: root.querySelector('.total-g'), at: 3900 }
+  ];
+  var caps = [
+    { el: root.querySelector('.cap-1'), s: 0, e: 1500 },
+    { el: root.querySelector('.cap-2'), s: 1500, e: 2700 },
+    { el: root.querySelector('.cap-3'), s: 2700, e: 3900 },
+    { el: root.querySelector('.cap-4'), s: 3900, e: T }
+  ];
+
+  // Hide everything first, so nothing flashes before the figure scrolls into view.
+  layers.concat(fades).forEach(function (o) { o.el.style.opacity = '0'; });
+  caps.forEach(function (c) { c.el.style.opacity = '0'; });
+
+  function play() {
+    layers.forEach(function (o) {
+      var a = o.el.animate(
+        [
+          { transform: 'translateY(-90px)', opacity: 0 },
+          { transform: 'translateY(6px)', opacity: 1, offset: 0.75 },
+          { transform: 'translateY(0)', opacity: 1 }
+        ],
+        { duration: 700, delay: o.at, easing: 'ease-out', fill: 'both' }
+      );
+      a.onfinish = function () { o.el.style.opacity = '1'; };
+    });
+    fades.forEach(function (o) {
+      var a = o.el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 600, delay: o.at, fill: 'both' });
+      a.onfinish = function () { o.el.style.opacity = '1'; };
+    });
+    caps.forEach(function (c, i) {
+      var f = 150 / T, kf;
+      if (i === 0) {
+        kf = [{ opacity: 1, offset: 0 }, { opacity: 1, offset: (c.e - 150) / T }, { opacity: 0, offset: c.e / T }, { opacity: 0, offset: 1 }];
+      } else if (i === caps.length - 1) {
+        kf = [{ opacity: 0, offset: 0 }, { opacity: 0, offset: c.s / T }, { opacity: 1, offset: c.s / T + f }, { opacity: 1, offset: 1 }];
+      } else {
+        kf = [{ opacity: 0, offset: 0 }, { opacity: 0, offset: c.s / T }, { opacity: 1, offset: c.s / T + f },
+              { opacity: 1, offset: (c.e - 150) / T }, { opacity: 0, offset: c.e / T }, { opacity: 0, offset: 1 }];
+      }
+      var a = c.el.animate(kf, { duration: T, fill: 'both' });
+      if (i === caps.length - 1) a.onfinish = function () { c.el.style.opacity = '1'; };
+    });
+  }
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { io.disconnect(); play(); }
+    });
+  }, { threshold: 0.4 });
+  io.observe(root);
+})();
+</script>
+</figure>

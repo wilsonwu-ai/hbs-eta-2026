@@ -1,0 +1,125 @@
+<figure class="fig" id="fig-rollups-paths" aria-labelledby="fig-rollups-paths-t">
+<style>
+#fig-rollups-paths svg { display: block; width: 100%; height: auto; font-family: inherit; }
+#fig-rollups-paths .start { fill: var(--w-navy-tint); stroke: var(--w-navy); stroke-width: 1.5; }
+#fig-rollups-paths .trunk { fill: none; stroke: var(--w-line-strong); stroke-width: 3; stroke-linecap: round; }
+#fig-rollups-paths .card { fill: var(--w-surface); stroke: var(--w-line-strong); stroke-width: 1; }
+#fig-rollups-paths .card.hl { fill: var(--w-accent-tint); stroke: var(--w-accent); stroke-width: 1.5; }
+#fig-rollups-paths .dot { fill: var(--w-navy); }
+#fig-rollups-paths .dot.hl { fill: var(--w-accent); }
+#fig-rollups-paths .num { fill: var(--w-surface); font-size: 15px; font-weight: 700; }
+#fig-rollups-paths .st { fill: var(--w-ink); font-size: 15px; font-weight: 700; }
+#fig-rollups-paths .hd { fill: var(--w-ink); font-size: 16px; font-weight: 700; }
+#fig-rollups-paths .mn { fill: var(--w-ink); font-size: 14px; }
+#fig-rollups-paths .who { fill: var(--w-muted); font-size: 14px; font-weight: 700; }
+#fig-rollups-paths .who.hl { fill: var(--w-accent); }
+</style>
+<p class="fig-title" id="fig-rollups-paths-t">There are five roads into buying a business, and this panel walked all five</p>
+<p class="fig-sub">It plays once as you scroll. Each card says what the road is and who on the panel took it. The copper one was new to me.</p>
+<svg viewBox="0 0 360 556" role="img" aria-label="Five roads into buying a business, each with who on the panel took it. One: self-funded search, where you pay for the search yourself then raise money for the deal, and 4 of the 5 panelists started here. Two: traditional search fund, where investors back you while you search, taken by Tibbs. Three: fund-backed CEO, where a fund backs the company and you run it, taken by Caldwell with Shore Capital, and the one that was new to me. Four: independent sponsor, where you find a deal first then raise money for that one deal, which Porter did before his fund. Five: holding company, where you buy companies and keep them long term, taken by Fong.">
+
+  <g class="step s0">
+    <rect class="start" x="8" y="4" width="344" height="38" rx="19"/>
+    <text class="hd" x="180" y="29" text-anchor="middle">You want to buy a business</text>
+  </g>
+
+  <path class="trunk" id="rp-trunk" pathLength="1" d="M30 42 L30 476"/>
+
+  <!-- 1 -->
+  <g class="step s1">
+    <rect class="card" x="50" y="58" width="302" height="88" rx="10"/>
+    <circle class="dot" cx="30" cy="76" r="14"/><text class="num" x="30" y="81" text-anchor="middle">1</text>
+    <text class="st" x="62" y="80">Self-funded search</text>
+    <text class="mn" x="62" y="101">You pay for the search yourself,</text>
+    <text class="mn" x="62" y="119">then raise money for the deal.</text>
+    <text class="who" x="62" y="138">4 of 5 panelists started here</text>
+  </g>
+
+  <!-- 2 -->
+  <g class="step s2">
+    <rect class="card" x="50" y="158" width="302" height="88" rx="10"/>
+    <circle class="dot" cx="30" cy="176" r="14"/><text class="num" x="30" y="181" text-anchor="middle">2</text>
+    <text class="st" x="62" y="180">Traditional search fund</text>
+    <text class="mn" x="62" y="201">Investors back you while you search,</text>
+    <text class="mn" x="62" y="219">then back the company you buy.</text>
+    <text class="who" x="62" y="238">Tibbs, Chimney Collective</text>
+  </g>
+
+  <!-- 3 focal -->
+  <g class="step s3">
+    <rect class="card hl" x="50" y="258" width="302" height="88" rx="10"/>
+    <circle class="dot hl" cx="30" cy="276" r="14"/><text class="num" x="30" y="281" text-anchor="middle">3</text>
+    <text class="st" x="62" y="280">Fund-backed CEO</text>
+    <text class="mn" x="62" y="301">A fund backs the company, and</text>
+    <text class="mn" x="62" y="319">you run it as CEO.</text>
+    <text class="who hl" x="62" y="338">Caldwell, with Shore. New to me.</text>
+  </g>
+
+  <!-- 4 -->
+  <g class="step s4">
+    <rect class="card" x="50" y="358" width="302" height="88" rx="10"/>
+    <circle class="dot" cx="30" cy="376" r="14"/><text class="num" x="30" y="381" text-anchor="middle">4</text>
+    <text class="st" x="62" y="380">Independent sponsor</text>
+    <text class="mn" x="62" y="401">You find a deal first, then raise</text>
+    <text class="mn" x="62" y="419">money for that one deal.</text>
+    <text class="who" x="62" y="438">Porter did these before his fund</text>
+  </g>
+
+  <!-- 5 -->
+  <g class="step s5">
+    <rect class="card" x="50" y="458" width="302" height="88" rx="10"/>
+    <circle class="dot" cx="30" cy="476" r="14"/><text class="num" x="30" y="481" text-anchor="middle">5</text>
+    <text class="st" x="62" y="480">Holding company</text>
+    <text class="mn" x="62" y="501">You buy companies and keep them</text>
+    <text class="mn" x="62" y="519">for the long term.</text>
+    <text class="who" x="62" y="538">Fong: no outside equity, long hold</text>
+  </g>
+</svg>
+<figcaption>From the panel, Notes from the HBS ETA Conference 2026. The plain-word descriptions are mine. Who took each road comes from the panelists' own stories. Some panelists changed roads along the way, so one person can appear in more than one place across my understanding.</figcaption>
+<script>
+(function () {
+  var fig = document.getElementById('fig-rollups-paths');
+  if (!fig || !fig.animate) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+
+  var steps = Array.prototype.slice.call(fig.querySelectorAll('.step'));
+  var trunk = fig.querySelector('.trunk');
+
+  steps.forEach(function (s) { s.style.opacity = '0'; });
+  trunk.style.strokeDasharray = '1';
+  trunk.style.strokeDashoffset = '1';
+
+  var played = false;
+  function play() {
+    if (played) return;
+    played = true;
+    var total = 400 + steps.length * 520;
+    var line = trunk.animate(
+      [{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }],
+      { duration: total, easing: 'linear', fill: 'forwards' }
+    );
+    line.onfinish = function () {
+      trunk.style.strokeDashoffset = '0';
+    };
+    steps.forEach(function (s, i) {
+      var a = s.animate(
+        [
+          { opacity: 0, transform: 'translateY(10px)' },
+          { opacity: 1, transform: 'translateY(0)' }
+        ],
+        { duration: 450, delay: 200 + i * 520, easing: 'ease-out', fill: 'both' }
+      );
+      a.onfinish = function () { s.style.opacity = '1'; };
+    });
+  }
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { play(); io.disconnect(); }
+    });
+  }, { threshold: 0.3 });
+  io.observe(fig);
+})();
+</script>
+</figure>

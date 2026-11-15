@@ -1,0 +1,24 @@
+{
+ "voice": "marin",
+ "model": "gpt-4o-mini-tts",
+ "instructions": "Calm, clear, warm American female teacher. Steady medium pace, friendly and unhurried. A short pause before each number. Plain American English.",
+ "speed": 1.0,
+ "scenes": [
+  {"id": "s1", "vo": "An SBA 7(a) loan is a bank loan the U.S. Small Business Administration partly guarantees. New rules for buying a business took effect October first, twenty twenty-six.",
+   "caption": "An SBA 7(a) loan is a bank loan the U.S. Small Business Administration partly guarantees. New rules for buying a business took effect October 1, 2026."},
+  {"id": "s2", "vo": "The core rule: ten percent of the project cost must come in as equity, money alongside the loan. That's the equity injection, and for a first acquisition it can't be reduced or eliminated.",
+   "caption": "The core rule: 10% of the project cost must come in as equity, money alongside the loan. That's the equity injection, and for a first acquisition it can't be reduced or eliminated."},
+  {"id": "s3", "vo": "At least five percent, half of it, must come from your own resources, such as cash that isn't borrowed.",
+   "caption": "At least 5%, half of it, must come from your own resources, such as cash that isn't borrowed."},
+  {"id": "s4", "vo": "The other five percent can be a seller note, but only on full standby for the life of the loan. That means the seller gets no payments on it until the bank loan is repaid.",
+   "caption": "The other 5% can be a seller note, but only on full standby for the life of the loan. That means the seller gets no payments on it until the bank loan is repaid."},
+  {"id": "s5", "vo": "A bigger seller note, not on full standby, must be covered by cash flow in the DSCR test. That's the debt service coverage ratio: cash flow divided by loan payments, at least one point two five times.",
+   "caption": "A bigger seller note, not on full standby, must be covered by cash flow in the DSCR test. That's the debt service coverage ratio: cash flow divided by loan payments, at least 1.25x."},
+  {"id": "s6", "vo": "Investors can fund part of the ten percent too, as minority owners. Until the loan is repaid, they can take only tax distributions.",
+   "caption": "Investors can fund part of the 10% too, as minority owners. Until the loan is repaid, they can take only tax distributions."},
+  {"id": "s7", "vo": "An illustrative two million dollar purchase. The bank loan covers ninety percent: one million eight hundred thousand dollars. Your own cash is five percent: one hundred thousand. A standby seller note is the last five percent: one hundred thousand.",
+   "caption": "An illustrative $2,000,000 purchase. The bank loan covers 90%: $1,800,000. Your own cash is 5%: $100,000. A standby seller note is the last 5%: $100,000."},
+  {"id": "s8", "vo": "Every lender has its own appetite, so confirm with your lender. The new SBA rules for buying a business.",
+   "caption": "Every lender has its own appetite, so confirm with your lender. The new SBA rules for buying a business."}
+ ]
+}

@@ -1,0 +1,8 @@
+brief/
+qa/
+motion/build/
+motion/assets/
+motion/__pycache__/
+__pycache__/
+.DS_Store
+motion/.hyperframes/

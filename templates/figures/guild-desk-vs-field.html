@@ -1,0 +1,77 @@
+<figure class="fig" id="fig-guild-desk-vs-field" aria-labelledby="fig-guild-desk-vs-field-t">
+<p class="fig-title" id="fig-guild-desk-vs-field-t">Dubin's advice: spend less time at the desk and more time with owners.</p>
+<p class="fig-sub">Scroll to watch it play once. The bars begin desk-heavy, the way Yudkoff said many newcomers start, and end where Dubin says to be.</p>
+<style>
+#fig-guild-desk-vs-field text{font-family:inherit}
+#fig-guild-desk-vs-field .lab{font-size:15px;font-weight:700;fill:var(--w-ink)}
+#fig-guild-desk-vs-field .note{font-size:14px;fill:var(--w-muted)}
+#fig-guild-desk-vs-field .body{font-size:14px;fill:var(--w-ink)}
+#fig-guild-desk-vs-field .track{fill:var(--w-line)}
+#fig-guild-desk-vs-field .bar-desk{fill:var(--w-navy)}
+#fig-guild-desk-vs-field .bar-field{fill:var(--w-accent)}
+#fig-guild-desk-vs-field .bar-desk,
+#fig-guild-desk-vs-field .bar-field{transform-box:fill-box;transform-origin:left center}
+#fig-guild-desk-vs-field .dot{transform-box:fill-box;transform-origin:center}
+#fig-guild-desk-vs-field .dot-a{fill:var(--w-accent)}
+#fig-guild-desk-vs-field .dot-b{fill:var(--w-accent-tint);stroke:var(--w-accent);stroke-width:2}
+</style>
+<svg viewBox="0 0 360 410" role="img" aria-label="Two bars show how the first months are spent. The desk research bar ends short, a small share of the time but not zero. The owner conversations bar ends long, the main work. Below, 30 dots show the 20 to 30 owner conversations Dubin recommends over 2 to 3 months. Example: pool service looked good on paper, but talking to owners showed prices too high, so he walked away.">
+  <text class="lab" x="20" y="28">At the desk</text>
+  <text class="note" x="340" y="28" text-anchor="end">short, not zero</text>
+  <rect class="track" x="20" y="38" width="320" height="24"/>
+  <rect class="bar-desk" x="20" y="38" width="64" height="24"/>
+
+  <text class="lab" x="20" y="96">With owners</text>
+  <text class="note" x="340" y="96" text-anchor="end">the main work</text>
+  <rect class="track" x="20" y="106" width="320" height="24"/>
+  <rect class="bar-field" x="20" y="106" width="256" height="24"/>
+
+  <text class="lab" x="20" y="170">Owner conversations, 2 to 3 months</text>
+
+  <g>
+    <circle class="dot dot-a" cx="36" cy="200" r="11"/><circle class="dot dot-a" cx="68" cy="200" r="11"/><circle class="dot dot-a" cx="100" cy="200" r="11"/><circle class="dot dot-a" cx="132" cy="200" r="11"/><circle class="dot dot-a" cx="164" cy="200" r="11"/><circle class="dot dot-a" cx="196" cy="200" r="11"/><circle class="dot dot-a" cx="228" cy="200" r="11"/><circle class="dot dot-a" cx="260" cy="200" r="11"/><circle class="dot dot-a" cx="292" cy="200" r="11"/><circle class="dot dot-a" cx="324" cy="200" r="11"/>
+    <circle class="dot dot-a" cx="36" cy="232" r="11"/><circle class="dot dot-a" cx="68" cy="232" r="11"/><circle class="dot dot-a" cx="100" cy="232" r="11"/><circle class="dot dot-a" cx="132" cy="232" r="11"/><circle class="dot dot-a" cx="164" cy="232" r="11"/><circle class="dot dot-a" cx="196" cy="232" r="11"/><circle class="dot dot-a" cx="228" cy="232" r="11"/><circle class="dot dot-a" cx="260" cy="232" r="11"/><circle class="dot dot-a" cx="292" cy="232" r="11"/><circle class="dot dot-a" cx="324" cy="232" r="11"/>
+    <circle class="dot dot-b" cx="36" cy="264" r="10"/><circle class="dot dot-b" cx="68" cy="264" r="10"/><circle class="dot dot-b" cx="100" cy="264" r="10"/><circle class="dot dot-b" cx="132" cy="264" r="10"/><circle class="dot dot-b" cx="164" cy="264" r="10"/><circle class="dot dot-b" cx="196" cy="264" r="10"/><circle class="dot dot-b" cx="228" cy="264" r="10"/><circle class="dot dot-b" cx="260" cy="264" r="10"/><circle class="dot dot-b" cx="292" cy="264" r="10"/><circle class="dot dot-b" cx="324" cy="264" r="10"/>
+  </g>
+  <text class="note" x="20" y="304">Solid: the first 20. Outlined: up to 30.</text>
+
+  <line x1="20" y1="324" x2="340" y2="324" stroke="var(--w-line-strong)"/>
+  <text class="body" x="20" y="350">Example: pool service looked perfect</text>
+  <text class="body" x="20" y="370">on paper. Talking to owners showed</text>
+  <text class="body" x="20" y="390">prices too high, so he walked away.</text>
+</svg>
+<figcaption>Illustrative: bar lengths show the shift in emphasis, not Dubin's own numbers. The 20 to 30 conversations over 2 to 3 months and the pool service example are from his keynote, as I understood it.</figcaption>
+<script>
+(function () {
+  var fig = document.getElementById('fig-guild-desk-vs-field');
+  if (!fig) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window) || !fig.animate) return;
+  var desk = fig.querySelector('.bar-desk');
+  var field = fig.querySelector('.bar-field');
+  var dots = fig.querySelectorAll('.dot');
+  var i;
+  desk.style.transform = 'scaleX(4)';
+  field.style.transform = 'scaleX(0.25)';
+  for (i = 0; i < dots.length; i++) dots[i].style.opacity = '0';
+  var played = false;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting && !played) { played = true; io.disconnect(); play(); }
+    });
+  }, { threshold: 0.4 });
+  io.observe(fig);
+  function play() {
+    var ease = 'cubic-bezier(.2,.7,.2,1)';
+    var a = desk.animate([{ transform: 'scaleX(4)' }, { transform: 'scaleX(1)' }], { duration: 1600, delay: 400, easing: ease, fill: 'both' });
+    var b = field.animate([{ transform: 'scaleX(0.25)' }, { transform: 'scaleX(1)' }], { duration: 1600, delay: 400, easing: ease, fill: 'both' });
+    a.onfinish = function () { desk.style.transform = 'scaleX(1)'; };
+    b.onfinish = function () { field.style.transform = 'scaleX(1)'; };
+    Array.prototype.forEach.call(dots, function (d, k) {
+      var an = d.animate([{ opacity: 0, transform: 'scale(0.3)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 300, delay: 1000 + k * 45, easing: 'ease-out', fill: 'both' });
+      an.onfinish = function () { d.style.opacity = '1'; };
+    });
+  }
+})();
+</script>
+</figure>

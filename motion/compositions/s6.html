@@ -1,0 +1,56 @@
+<template>
+<style>@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap');
+#root { position:absolute; inset:0; font-family:'Libre Franklin',sans-serif; font-weight:700; color:#08243A; overflow:hidden; }
+#root .wrap { position:absolute; inset:0; }
+#root .t { position:absolute; font-weight:700; white-space:nowrap; line-height:1.1; }
+#root .m { font-weight:400; }
+#root .box { position:absolute; }
+#root .ttl { position:absolute; left:120px; top:92px; font-size:68px; font-weight:700; white-space:nowrap; line-height:1.1; letter-spacing:-0.01em; color:#08243A; }
+#root .stripe { position:absolute; box-sizing:border-box; border:4px solid #08243A; background:repeating-linear-gradient(135deg, #08243A 0 5px, #FFFFFF 5px 16px); }
+#root .dots { position:absolute; box-sizing:border-box; border:4px solid #08243A; background-color:#FFFFFF; background-image:radial-gradient(#08243A 3.2px, transparent 3.8px); background-size:22px 22px; }
+#root .ghost { position:absolute; box-sizing:border-box; border:4px dashed #08243A; background:#FFFFFF; }
+#root .solid { position:absolute; box-sizing:border-box; }
+#root .pill { position:absolute; box-sizing:border-box; white-space:nowrap; font-weight:700; text-align:center; }
+</style>
+<div id="root" data-composition-id="s6" data-width="1920" data-height="1080">
+<div class="wrap" id="s6-wrap">
+<div class="t" id="s6-ttl" style="left:120px;top:92px;font-size:68px;color:#08243A;">Investors can fund part of it</div>
+<div class="t" id="s6-cap" style="left:210px;top:300px;width:1500px;text-align:center;font-size:50px;color:rgba(8,36,58,0.74);font-weight:400;">The 10% equity injection</div>
+<div class="solid" id="s6-frame" style="left:204px;top:404px;width:1512px;height:172px;border:6px solid #08243A;border-radius:18px;"></div>
+<div class="solid" id="s6-own" style="left:210px;top:410px;width:750px;height:160px;background:#000000;border-radius:12px 0 0 12px;"></div>
+<div class="t" id="s6-own-t" style="left:210px;top:438px;width:750px;text-align:center;font-size:100px;color:#FFFFFF;font-weight:700;">5%</div>
+<div class="dots" id="s6-inv" style="left:960px;top:410px;width:750px;height:160px;border-radius:0 12px 12px 0;"></div>
+<div class="solid" id="s6-inv-chip" style="left:1210px;top:436px;width:250px;height:108px;background:#FFFFFF;border-radius:10px;"></div>
+<div class="t" id="s6-inv-t" style="left:1210px;top:462px;width:250px;text-align:center;font-size:52px;color:#08243A;font-weight:700;">Investors</div>
+<div class="t" id="s6-own-l" style="left:210px;top:610px;width:750px;text-align:center;font-size:48px;color:#08243A;font-weight:700;">Your own resources</div>
+<div class="t" id="s6-inv-l" style="left:960px;top:610px;width:750px;text-align:center;font-size:48px;color:#08243A;font-weight:700;">Investor equity</div>
+<div class="pill" id="s6-c1" style="left:300px;top:740px;width:560px;height:110px;background:#FFFFFF;border:5px solid #08243A;border-radius:55px;"></div>
+<div class="t" id="s6-c1-t" style="left:300px;top:770px;width:560px;text-align:center;font-size:52px;color:#08243A;font-weight:700;">Minority owners</div>
+<div class="pill" id="s6-c2" style="left:910px;top:740px;width:880px;height:110px;background:#08243A;border-radius:55px;"></div>
+<div class="t" id="s6-c2-t" style="left:910px;top:772px;width:880px;text-align:center;font-size:48px;color:#FFFFFF;font-weight:700;">Tax distributions only until repaid</div>
+</div>
+</div>
+<script>
+(function() {
+const tl = gsap.timeline({ paused: true });
+const D = 8.67;
+tl.fromTo('#s6-wrap', { opacity: 0 }, { opacity: 1, duration: 0.25, ease: 'power2.out' }, 0);
+tl.to('#s6-wrap', { opacity: 0, duration: 0.2, ease: 'power2.in' }, D - 0.2);
+tl.fromTo('#s6-ttl', { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, 0.200);
+tl.fromTo('#s6-cap', { opacity: 0 }, { opacity: 1, duration: 0.4, ease: 'power2.out' }, 0.400);
+tl.fromTo('#s6-frame', { opacity: 0 }, { opacity: 1, duration: 0.4, ease: 'power2.out' }, 0.400);
+tl.fromTo('#s6-own', { opacity: 0 }, { opacity: 1, duration: 0.5, ease: 'power2.out' }, 0.500);
+tl.fromTo('#s6-own-t', { opacity: 0 }, { opacity: 1, duration: 0.4, ease: 'power2.out' }, 0.600);
+tl.fromTo('#s6-own-l', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.800);
+tl.fromTo('#s6-inv', { opacity: 0 }, { opacity: 1, duration: 0.6, ease: 'power2.out' }, 0.250);
+tl.fromTo('#s6-inv-chip', { opacity: 0 }, { opacity: 1, duration: 0.4, ease: 'power2.out' }, 0.450);
+tl.fromTo('#s6-inv-t', { opacity: 0 }, { opacity: 1, duration: 0.4, ease: 'power2.out' }, 0.500);
+tl.fromTo('#s6-inv-l', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.550);
+tl.fromTo('#s6-c1', { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 3.150);
+tl.fromTo('#s6-c1-t', { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 3.250);
+tl.fromTo('#s6-c2', { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 5.790);
+tl.fromTo('#s6-c2-t', { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 5.890);
+window.__timelines['s6'] = tl;
+})();
+</script>
+</template>

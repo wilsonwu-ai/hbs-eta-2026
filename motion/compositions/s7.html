@@ -1,0 +1,66 @@
+<template>
+<style>@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap');
+#root { position:absolute; inset:0; font-family:'Libre Franklin',sans-serif; font-weight:700; color:#08243A; overflow:hidden; }
+#root .wrap { position:absolute; inset:0; }
+#root .t { position:absolute; font-weight:700; white-space:nowrap; line-height:1.1; }
+#root .m { font-weight:400; }
+#root .box { position:absolute; }
+#root .ttl { position:absolute; left:120px; top:92px; font-size:68px; font-weight:700; white-space:nowrap; line-height:1.1; letter-spacing:-0.01em; color:#08243A; }
+#root .stripe { position:absolute; box-sizing:border-box; border:4px solid #08243A; background:repeating-linear-gradient(135deg, #08243A 0 5px, #FFFFFF 5px 16px); }
+#root .dots { position:absolute; box-sizing:border-box; border:4px solid #08243A; background-color:#FFFFFF; background-image:radial-gradient(#08243A 3.2px, transparent 3.8px); background-size:22px 22px; }
+#root .ghost { position:absolute; box-sizing:border-box; border:4px dashed #08243A; background:#FFFFFF; }
+#root .solid { position:absolute; box-sizing:border-box; }
+#root .pill { position:absolute; box-sizing:border-box; white-space:nowrap; font-weight:700; text-align:center; }
+</style>
+<div id="root" data-composition-id="s7" data-width="1920" data-height="1080">
+<div class="wrap" id="s7-wrap">
+<div class="t" id="s7-ttl" style="left:120px;top:92px;font-size:68px;color:#08243A;">An illustrative $2,000,000 purchase</div>
+<div class="solid" id="s7-loan" style="left:170px;top:320.0px;width:470px;height:630.0px;background:#08243A;border-radius:0 0 10px 10px;"></div>
+<div class="solid" id="s7-cash" style="left:170px;top:285.0px;width:470px;height:35.0px;background:#000000;border-top:3px solid #FFFFFF;"></div>
+<div class="stripe" id="s7-note" style="left:170px;top:250px;width:470px;height:35.0px;border-radius:10px 10px 0 0;"></div>
+<div class="t" id="s7-note-n" style="left:790px;top:236px;font-size:44px;color:#08243A;">Standby seller note</div>
+<div class="t" id="s7-note-p" style="left:1230px;top:222px;font-size:68px;color:#08243A;line-height:1;">5%</div>
+<div class="t" id="s7-note-a" style="left:1440px;top:222px;font-size:68px;color:#08243A;line-height:1;letter-spacing:-0.02em;">$100,000</div>
+<div class="t" id="s7-cash-n" style="left:790px;top:364px;font-size:44px;color:#08243A;">Your own cash</div>
+<div class="t" id="s7-cash-p" style="left:1230px;top:350px;font-size:68px;color:#08243A;line-height:1;">5%</div>
+<div class="t" id="s7-cash-a" style="left:1440px;top:350px;font-size:68px;color:#08243A;line-height:1;letter-spacing:-0.02em;">$100,000</div>
+<div class="t" id="s7-loan-n" style="left:790px;top:604px;font-size:44px;color:#08243A;">Bank loan</div>
+<div class="t" id="s7-loan-p" style="left:1230px;top:590px;font-size:68px;color:#08243A;line-height:1;">90%</div>
+<div class="t" id="s7-loan-a" style="left:1440px;top:590px;font-size:68px;color:#08243A;line-height:1;letter-spacing:-0.02em;">$1,800,000</div>
+<svg class="box" id="s7-ln-svg" style="left:0;top:0;" width="1920" height="1080" viewBox="0 0 1920 1080"><path id="s7-ln" d="M 650 267.5 L 770 262" fill="none" stroke="#08243A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" pathLength="1000" stroke-dasharray="1000 1200" stroke-dashoffset="1100"/></svg>
+<svg class="box" id="s7-lc-svg" style="left:0;top:0;" width="1920" height="1080" viewBox="0 0 1920 1080"><path id="s7-lc" d="M 650 302.5 L 770 390" fill="none" stroke="#08243A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" pathLength="1000" stroke-dasharray="1000 1200" stroke-dashoffset="1100"/></svg>
+<svg class="box" id="s7-ll-svg" style="left:0;top:0;" width="1920" height="1080" viewBox="0 0 1920 1080"><path id="s7-ll" d="M 650 635.0 L 770 628" fill="none" stroke="#08243A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" pathLength="1000" stroke-dasharray="1000 1200" stroke-dashoffset="1100"/></svg>
+<div class="t" id="s7-tot" style="left:790px;top:676px;font-size:40px;color:rgba(8,36,58,0.74);font-weight:400;">SBA 7(a) loan</div>
+<div class="pill" id="s7-chip" style="left:1290px;top:800px;width:440px;height:80px;background:#08243A;border-radius:40px;"></div>
+<div class="t" id="s7-chip-t" style="left:1290px;top:818px;width:440px;text-align:center;font-size:44px;color:#FFFFFF;font-weight:700;">Illustrative</div>
+</div>
+</div>
+<script>
+(function() {
+const tl = gsap.timeline({ paused: true });
+const D = 14.93;
+tl.fromTo('#s7-wrap', { opacity: 0 }, { opacity: 1, duration: 0.25, ease: 'power2.out' }, 0);
+tl.to('#s7-wrap', { opacity: 0, duration: 0.2, ease: 'power2.in' }, D - 0.2);
+tl.fromTo('#s7-ttl', { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, 0.200);
+tl.fromTo('#s7-chip', { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 0.590);
+tl.fromTo('#s7-chip-t', { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 0.640);
+tl.fromTo('#s7-loan', { opacity: 0, y: -90 }, { opacity: 1, y: 0, duration: 0.7, ease: 'back.out(1.2)' }, 3.550);
+tl.fromTo('#s7-ll', { strokeDashoffset: 1100 }, { strokeDashoffset: 0, duration: 0.4, ease: 'power2.out' }, 4.050);
+tl.fromTo('#s7-loan-n', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 4.050);
+tl.fromTo('#s7-loan-p', { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' }, 4.020);
+tl.fromTo('#s7-loan-a', { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 5.100);
+tl.fromTo('#s7-tot', { opacity: 0 }, { opacity: 1, duration: 0.4, ease: 'power2.out' }, 5.550);
+tl.fromTo('#s7-cash', { opacity: 0, y: -90 }, { opacity: 1, y: 0, duration: 0.55, ease: 'back.out(1.4)' }, 7.490);
+tl.fromTo('#s7-lc', { strokeDashoffset: 1100 }, { strokeDashoffset: 0, duration: 0.4, ease: 'power2.out' }, 7.890);
+tl.fromTo('#s7-cash-n', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 7.840);
+tl.fromTo('#s7-cash-p', { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' }, 8.200);
+tl.fromTo('#s7-cash-a', { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 9.100);
+tl.fromTo('#s7-note', { opacity: 0, y: -90 }, { opacity: 1, y: 0, duration: 0.55, ease: 'back.out(1.4)' }, 10.350);
+tl.fromTo('#s7-ln', { strokeDashoffset: 1100 }, { strokeDashoffset: 0, duration: 0.4, ease: 'power2.out' }, 10.750);
+tl.fromTo('#s7-note-n', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 10.700);
+tl.fromTo('#s7-note-p', { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' }, 12.100);
+tl.fromTo('#s7-note-a', { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 12.940);
+window.__timelines['s7'] = tl;
+})();
+</script>
+</template>

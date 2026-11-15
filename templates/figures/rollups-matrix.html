@@ -1,0 +1,66 @@
+<figure class="fig" id="fig-rollups-matrix" aria-labelledby="fig-rollups-matrix-t">
+<style>
+#fig-rollups-matrix svg { display: block; width: 100%; height: auto; font-family: inherit; }
+#fig-rollups-matrix .card { fill: var(--w-surface); stroke: var(--w-line-strong); stroke-width: 1; }
+#fig-rollups-matrix .card.hl { fill: var(--w-accent-tint); stroke: var(--w-accent); stroke-width: 1.5; }
+#fig-rollups-matrix .bar { fill: var(--w-accent); }
+#fig-rollups-matrix .rule { stroke: var(--w-line); stroke-width: 1; }
+#fig-rollups-matrix .nm { fill: var(--w-ink); font-size: 15px; font-weight: 700; }
+#fig-rollups-matrix .co { fill: var(--w-muted); font-size: 14px; }
+#fig-rollups-matrix .lb { fill: var(--w-muted); font-size: 14px; font-weight: 700; }
+#fig-rollups-matrix .v { fill: var(--w-ink); font-size: 14px; }
+#fig-rollups-matrix .na { fill: var(--w-muted); font-size: 14px; font-style: italic; }
+#fig-rollups-matrix .hl-t { fill: var(--w-accent); font-weight: 700; }
+</style>
+<p class="fig-title" id="fig-rollups-matrix-t">Five operators, five different ways to fund a roll-up and treat the founders</p>
+<p class="fig-sub">Read each card from top to bottom. The copper card is the one with no outside equity.</p>
+<svg viewBox="0 0 360 712" role="img" aria-label="Five cards, one per panelist. Ross Porter of Heritage Holding: self-funded search then a fund, founders stay to hand over, about 70 businesses. Courtney Ellenbogen of Aesthetic Partners: self-funded then an investor, founders stay because they still bring revenue, 15 to 17 deals. Xander Fong of Scientific Safety Alliance: no outside equity and private debt, founders out within about a year, about 30 deals, a 30 year hold. Branson Tibbs of Chimney Collective: search fund plus a credit line, owners stay with equity, 7 closed and an eighth due. Keith Caldwell of H2O Care Partners: self-funded then Shore Capital, the first founder stayed on, about 45 deals. Deal counts are each panelist's own rounded figures.">
+
+  <!-- 1 Porter -->
+  <rect class="card" x="8" y="4" width="344" height="134" rx="10"/>
+  <text class="nm" x="20" y="28">Ross Porter<tspan class="co" dx="8" font-weight="400">Heritage Holding</tspan></text>
+  <line class="rule" x1="20" y1="40" x2="340" y2="40"/>
+  <text class="lb" x="20" y="62">Capital</text><text class="v" x="100" y="62">Self-funded search, then a fund</text>
+  <text class="lb" x="20" y="84">Founders</text><text class="v" x="100" y="84">Stay on to hand over</text>
+  <text class="lb" x="20" y="106">Pace</text><text class="v" x="100" y="106">About 70 businesses (Porter)</text>
+  <text class="lb" x="20" y="128">Hold</text><text class="na" x="100" y="128">Not covered</text>
+
+  <!-- 2 Ellenbogen -->
+  <rect class="card" x="8" y="146" width="344" height="134" rx="10"/>
+  <text class="nm" x="20" y="170">Courtney Ellenbogen<tspan class="co" dx="8" font-weight="400">Aesthetic Partners</tspan></text>
+  <line class="rule" x1="20" y1="182" x2="340" y2="182"/>
+  <text class="lb" x="20" y="204">Capital</text><text class="v" x="100" y="204">Self-funded, then an investor</text>
+  <text class="lb" x="20" y="226">Founders</text><text class="v" x="100" y="226">Stay: they still bring revenue</text>
+  <text class="lb" x="20" y="248">Pace</text><text class="v" x="100" y="248">15 to 17 deals (Ellenbogen)</text>
+  <text class="lb" x="20" y="270">Hold</text><text class="v" x="100" y="270">Next investor in mind</text>
+
+  <!-- 3 Fong (focal) -->
+  <rect class="card hl" x="8" y="288" width="344" height="134" rx="10"/>
+  <rect class="bar" x="8" y="298" width="6" height="114" rx="3"/>
+  <text class="nm" x="22" y="312">Xander Fong<tspan class="co" dx="8" font-weight="400">Scientific Safety Alliance</tspan></text>
+  <line class="rule" x1="22" y1="324" x2="340" y2="324"/>
+  <text class="lb" x="22" y="346">Capital</text><text class="v hl-t" x="100" y="346">No outside equity, private debt</text>
+  <text class="lb" x="22" y="368">Founders</text><text class="v" x="100" y="368">Out within about a year</text>
+  <text class="lb" x="22" y="390">Pace</text><text class="v" x="100" y="390">About 30 deals (Fong)</text>
+  <text class="lb" x="22" y="412">Hold</text><text class="v" x="100" y="412">Long: 30 years (Fong)</text>
+
+  <!-- 4 Tibbs -->
+  <rect class="card" x="8" y="430" width="344" height="134" rx="10"/>
+  <text class="nm" x="20" y="454">Branson Tibbs<tspan class="co" dx="8" font-weight="400">Chimney Collective</tspan></text>
+  <line class="rule" x1="20" y1="466" x2="340" y2="466"/>
+  <text class="lb" x="20" y="488">Capital</text><text class="v" x="100" y="488">Search fund, plus a credit line</text>
+  <text class="lb" x="20" y="510">Founders</text><text class="v" x="100" y="510">Owners stay, with equity</text>
+  <text class="lb" x="20" y="532">Pace</text><text class="v" x="100" y="532">7 closed, 8th due (Tibbs)</text>
+  <text class="lb" x="20" y="554">Hold</text><text class="v" x="100" y="554">Next investor in mind</text>
+
+  <!-- 5 Caldwell -->
+  <rect class="card" x="8" y="572" width="344" height="134" rx="10"/>
+  <text class="nm" x="20" y="596">Keith Caldwell<tspan class="co" dx="8" font-weight="400">H2O Care Partners</tspan></text>
+  <line class="rule" x1="20" y1="608" x2="340" y2="608"/>
+  <text class="lb" x="20" y="630">Capital</text><text class="v" x="100" y="630">Self-funded, then Shore Capital</text>
+  <text class="lb" x="20" y="652">Founders</text><text class="v" x="100" y="652">First founder stayed on</text>
+  <text class="lb" x="20" y="674">Pace</text><text class="v" x="100" y="674">About 45 deals (Caldwell)</text>
+  <text class="lb" x="20" y="696">Hold</text><text class="na" x="100" y="696">Not covered</text>
+</svg>
+<figcaption>From the panel, Notes from the HBS ETA Conference 2026. Deal counts and plans are each panelist's own rounded figures for their own company, not independently checked. "Not covered" means the panel did not get to it. The row wording is mine.</figcaption>
+</figure>

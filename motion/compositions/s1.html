@@ -1,0 +1,58 @@
+<template>
+<style>@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap');
+#root { position:absolute; inset:0; font-family:'Libre Franklin',sans-serif; font-weight:700; color:#08243A; overflow:hidden; }
+#root .wrap { position:absolute; inset:0; }
+#root .t { position:absolute; font-weight:700; white-space:nowrap; line-height:1.1; }
+#root .m { font-weight:400; }
+#root .box { position:absolute; }
+#root .ttl { position:absolute; left:120px; top:92px; font-size:68px; font-weight:700; white-space:nowrap; line-height:1.1; letter-spacing:-0.01em; color:#08243A; }
+#root .stripe { position:absolute; box-sizing:border-box; border:4px solid #08243A; background:repeating-linear-gradient(135deg, #08243A 0 5px, #FFFFFF 5px 16px); }
+#root .dots { position:absolute; box-sizing:border-box; border:4px solid #08243A; background-color:#FFFFFF; background-image:radial-gradient(#08243A 3.2px, transparent 3.8px); background-size:22px 22px; }
+#root .ghost { position:absolute; box-sizing:border-box; border:4px dashed #08243A; background:#FFFFFF; }
+#root .solid { position:absolute; box-sizing:border-box; }
+#root .pill { position:absolute; box-sizing:border-box; white-space:nowrap; font-weight:700; text-align:center; }
+</style>
+<div id="root" data-composition-id="s1" data-width="1920" data-height="1080">
+<div class="wrap" id="s1-wrap">
+<div class="t" id="s1-ttl" style="left:120px;top:92px;font-size:68px;color:#08243A;letter-spacing:-0.01em;">SBA 7(a) acquisition loan</div>
+<div class="solid" id="s1-bank" style="left:740px;top:360px;width:440px;height:150px;background:#08243A;border-radius:14px;"></div>
+<div class="t" id="s1-bank-t" style="left:740px;top:410px;width:440px;text-align:center;font-size:56px;color:#FFFFFF;font-weight:700;">Bank</div>
+<div class="solid" id="s1-buy" style="left:1360px;top:360px;width:440px;height:150px;background:#FFFFFF;border:5px solid #08243A;border-radius:14px;"></div>
+<div class="t" id="s1-buy-t" style="left:1360px;top:385px;width:440px;text-align:center;font-size:46px;color:#08243A;font-weight:700;">You, buying<br>a business</div>
+<div class="solid" id="s1-sba" style="left:120px;top:360px;width:440px;height:150px;background:#FFFFFF;border:5px solid #08243A;border-radius:14px;"></div>
+<div class="t" id="s1-sba-t" style="left:120px;top:385px;width:440px;text-align:center;font-size:42px;color:#08243A;font-weight:700;">U.S. Small Business<br>Administration</div>
+<svg class="box" id="s1-ar1-svg" style="left:0;top:0;" width="1920" height="1080" viewBox="0 0 1920 1080"><path id="s1-ar1" d="M 1186 435 L 1290 435" fill="none" stroke="#08243A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" pathLength="1000" stroke-dasharray="1000 1200" stroke-dashoffset="1100"/><polygon id="s1-ar1-h" points="1284,410 1340,435 1284,460" fill="#08243A" opacity="0"/></svg>
+<div class="t" id="s1-ar1-t" style="left:1180px;top:530px;width:180px;text-align:center;font-size:46px;color:#08243A;font-weight:700;">loan</div>
+<svg class="box" id="s1-ar2-svg" style="left:0;top:0;" width="1920" height="1080" viewBox="0 0 1920 1080"><path id="s1-ar2" d="M 566 435 L 670 435" fill="none" stroke="#08243A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" pathLength="1000" stroke-dasharray="1000 1200" stroke-dashoffset="1100"/><polygon id="s1-ar2-h" points="664,410 720,435 664,460" fill="#08243A" opacity="0"/></svg>
+<div class="t" id="s1-ar2-t" style="left:540px;top:530px;width:200px;text-align:center;font-size:40px;color:#08243A;font-weight:700;">partly<br>guarantees</div>
+<div class="pill" id="s1-chip" style="left:380px;top:760px;width:1160px;height:120px;background:#08243A;border-radius:60px;"></div>
+<div class="t" id="s1-chip-t" style="left:380px;top:791px;width:1160px;text-align:center;font-size:56px;color:#FFFFFF;font-weight:700;">New rules effective October 1, 2026</div>
+<div class="t" id="s1-sop" style="left:380px;top:910px;width:1160px;text-align:center;font-size:40px;color:rgba(8,36,58,0.74);font-weight:400;">SBA SOP 50 10 8.1</div>
+</div>
+</div>
+<script>
+(function() {
+const tl = gsap.timeline({ paused: true });
+const D = 12.93;
+tl.fromTo('#s1-wrap', { opacity: 0 }, { opacity: 1, duration: 0.25, ease: 'power2.out' }, 0);
+tl.to('#s1-wrap', { opacity: 0, duration: 0.2, ease: 'power2.in' }, D - 0.2);
+tl.fromTo('#s1-ttl', { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, 0.300);
+tl.fromTo('#s1-bank', { opacity: 0 }, { opacity: 1, duration: 0.4, ease: 'power2.out' }, 3.390);
+tl.fromTo('#s1-bank-t', { opacity: 0 }, { opacity: 1, duration: 0.4, ease: 'power2.out' }, 3.490);
+tl.fromTo('#s1-buy', { opacity: 0 }, { opacity: 1, duration: 0.4, ease: 'power2.out' }, 3.750);
+tl.fromTo('#s1-buy-t', { opacity: 0 }, { opacity: 1, duration: 0.4, ease: 'power2.out' }, 3.850);
+tl.fromTo('#s1-ar1', { strokeDashoffset: 1100 }, { strokeDashoffset: 0, duration: 0.5, ease: 'power2.out' }, 3.650);
+tl.fromTo('#s1-ar1-h', { opacity: 0 }, { opacity: 1, duration: 0.2, ease: 'power2.out' }, 4.000);
+tl.fromTo('#s1-ar1-t', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 3.900);
+tl.fromTo('#s1-sba', { opacity: 0 }, { opacity: 1, duration: 0.4, ease: 'power2.out' }, 4.350);
+tl.fromTo('#s1-sba-t', { opacity: 0 }, { opacity: 1, duration: 0.4, ease: 'power2.out' }, 4.450);
+tl.fromTo('#s1-ar2', { strokeDashoffset: 1100 }, { strokeDashoffset: 0, duration: 0.5, ease: 'power2.out' }, 6.090);
+tl.fromTo('#s1-ar2-h', { opacity: 0 }, { opacity: 1, duration: 0.2, ease: 'power2.out' }, 6.440);
+tl.fromTo('#s1-ar2-t', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 6.190);
+tl.fromTo('#s1-chip', { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out' }, 7.690);
+tl.fromTo('#s1-chip-t', { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 7.790);
+tl.fromTo('#s1-sop', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 10.270);
+window.__timelines['s1'] = tl;
+})();
+</script>
+</template>

@@ -1,0 +1,46 @@
+<template>
+<style>@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap');
+#root { position:absolute; inset:0; font-family:'Libre Franklin',sans-serif; font-weight:700; color:#08243A; overflow:hidden; }
+#root .wrap { position:absolute; inset:0; }
+#root .t { position:absolute; font-weight:700; white-space:nowrap; line-height:1.1; }
+#root .m { font-weight:400; }
+#root .box { position:absolute; }
+#root .ttl { position:absolute; left:120px; top:92px; font-size:68px; font-weight:700; white-space:nowrap; line-height:1.1; letter-spacing:-0.01em; color:#08243A; }
+#root .stripe { position:absolute; box-sizing:border-box; border:4px solid #08243A; background:repeating-linear-gradient(135deg, #08243A 0 5px, #FFFFFF 5px 16px); }
+#root .dots { position:absolute; box-sizing:border-box; border:4px solid #08243A; background-color:#FFFFFF; background-image:radial-gradient(#08243A 3.2px, transparent 3.8px); background-size:22px 22px; }
+#root .ghost { position:absolute; box-sizing:border-box; border:4px dashed #08243A; background:#FFFFFF; }
+#root .solid { position:absolute; box-sizing:border-box; }
+#root .pill { position:absolute; box-sizing:border-box; white-space:nowrap; font-weight:700; text-align:center; }
+</style>
+<div id="root" data-composition-id="s3" data-width="1920" data-height="1080">
+<div class="wrap" id="s3-wrap">
+<div class="t" id="s3-ttl" style="left:120px;top:92px;font-size:68px;color:#08243A;">Half must be your own</div>
+<div class="t" id="s3-cap" style="left:210px;top:300px;width:1500px;text-align:center;font-size:50px;color:rgba(8,36,58,0.74);font-weight:400;">The 10% equity injection</div>
+<div class="solid" id="s3-frame" style="left:204px;top:404px;width:1512px;height:172px;border:6px solid #08243A;border-radius:18px;"></div>
+<div class="solid" id="s3-own" style="left:210px;top:410px;width:750px;height:160px;background:#000000;border-radius:12px 0 0 12px;transform-origin:0% 50%;"></div>
+<div class="t" id="s3-own-t" style="left:210px;top:438px;width:750px;text-align:center;font-size:100px;color:#FFFFFF;font-weight:700;">5%</div>
+<div class="ghost" id="s3-oth" style="left:960px;top:410px;width:750px;height:160px;border-radius:0 12px 12px 0;"></div>
+<div class="t" id="s3-oth-t" style="left:960px;top:438px;width:750px;text-align:center;font-size:100px;color:rgba(8,36,58,0.30);font-weight:700;">5%</div>
+<div class="t" id="s3-l1" style="left:210px;top:640px;width:750px;text-align:center;font-size:56px;color:#08243A;font-weight:700;">Your own resources</div>
+<div class="t" id="s3-l2" style="left:210px;top:716px;width:750px;text-align:center;font-size:44px;color:rgba(8,36,58,0.74);font-weight:400;">such as cash that isn't borrowed</div>
+</div>
+</div>
+<script>
+(function() {
+const tl = gsap.timeline({ paused: true });
+const D = 7.91;
+tl.fromTo('#s3-wrap', { opacity: 0 }, { opacity: 1, duration: 0.25, ease: 'power2.out' }, 0);
+tl.to('#s3-wrap', { opacity: 0, duration: 0.2, ease: 'power2.in' }, D - 0.2);
+tl.fromTo('#s3-ttl', { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, 0.200);
+tl.fromTo('#s3-cap', { opacity: 0 }, { opacity: 1, duration: 0.4, ease: 'power2.out' }, 0.400);
+tl.fromTo('#s3-frame', { opacity: 0 }, { opacity: 1, duration: 0.4, ease: 'power2.out' }, 0.400);
+tl.fromTo('#s3-own', { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: 'power2.out' }, 0.930);
+tl.fromTo('#s3-own-t', { opacity: 0 }, { opacity: 1, duration: 0.4, ease: 'power2.out' }, 1.280);
+tl.fromTo('#s3-oth', { opacity: 0 }, { opacity: 1, duration: 0.5, ease: 'power2.out' }, 2.010);
+tl.fromTo('#s3-oth-t', { opacity: 0 }, { opacity: 1, duration: 0.5, ease: 'power2.out' }, 2.210);
+tl.fromTo('#s3-l1', { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 3.690);
+tl.fromTo('#s3-l2', { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 5.590);
+window.__timelines['s3'] = tl;
+})();
+</script>
+</template>

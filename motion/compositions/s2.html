@@ -1,0 +1,53 @@
+<template>
+<style>@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap');
+#root { position:absolute; inset:0; font-family:'Libre Franklin',sans-serif; font-weight:700; color:#08243A; overflow:hidden; }
+#root .wrap { position:absolute; inset:0; }
+#root .t { position:absolute; font-weight:700; white-space:nowrap; line-height:1.1; }
+#root .m { font-weight:400; }
+#root .box { position:absolute; }
+#root .ttl { position:absolute; left:120px; top:92px; font-size:68px; font-weight:700; white-space:nowrap; line-height:1.1; letter-spacing:-0.01em; color:#08243A; }
+#root .stripe { position:absolute; box-sizing:border-box; border:4px solid #08243A; background:repeating-linear-gradient(135deg, #08243A 0 5px, #FFFFFF 5px 16px); }
+#root .dots { position:absolute; box-sizing:border-box; border:4px solid #08243A; background-color:#FFFFFF; background-image:radial-gradient(#08243A 3.2px, transparent 3.8px); background-size:22px 22px; }
+#root .ghost { position:absolute; box-sizing:border-box; border:4px dashed #08243A; background:#FFFFFF; }
+#root .solid { position:absolute; box-sizing:border-box; }
+#root .pill { position:absolute; box-sizing:border-box; white-space:nowrap; font-weight:700; text-align:center; }
+</style>
+<div id="root" data-composition-id="s2" data-width="1920" data-height="1080">
+<div class="wrap" id="s2-wrap">
+<div class="t" id="s2-ttl" style="left:120px;top:92px;font-size:68px;color:#08243A;">The equity injection</div>
+<div class="solid" id="s2-loan" style="left:210px;top:470px;width:1350px;height:150px;background:#08243A;border-radius:12px 0 0 12px;transform-origin:0% 50%;"></div>
+<div class="t" id="s2-loan-t" style="left:210px;top:515px;width:1350px;text-align:center;font-size:56px;color:#FFFFFF;font-weight:700;">Bank loan  90%</div>
+<div class="solid" id="s2-eq" style="left:1560px;top:470px;width:150px;height:150px;background:#000000;border-radius:0 12px 12px 0;"></div>
+<svg class="box" id="s2-lead-svg" style="left:0;top:0;" width="1920" height="1080" viewBox="0 0 1920 1080"><path id="s2-lead" d="M 1635 456 L 1635 392" fill="none" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" pathLength="1000" stroke-dasharray="1000 1200" stroke-dashoffset="1100"/></svg>
+<div class="t" id="s2-big" style="left:1100px;top:226px;width:610px;text-align:right;font-size:150px;line-height:1;letter-spacing:-0.02em;">10%</div>
+<div class="t m" id="s2-big-l" style="left:900px;top:196px;width:450px;text-align:right;font-size:52px;line-height:1.15;">equity<br>injection</div>
+<svg class="box" id="s2-brk-svg" style="left:0;top:0;" width="1920" height="1080" viewBox="0 0 1920 1080"><path id="s2-brk" d="M 210 650 L 210 676 L 1710 676 L 1710 650" fill="none" stroke="#08243A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" pathLength="1000" stroke-dasharray="1000 1200" stroke-dashoffset="1100"/></svg>
+<div class="t" id="s2-brk-t" style="left:210px;top:696px;width:1500px;text-align:center;font-size:48px;color:#08243A;font-weight:400;">Total project cost</div>
+<div class="pill" id="s2-pill" style="left:360px;top:830px;width:1200px;height:104px;background:#FFFFFF;border:5px solid #08243A;border-radius:52px;"></div>
+<div class="t" id="s2-pill-t" style="left:360px;top:856px;width:1200px;text-align:center;font-size:52px;color:#08243A;font-weight:700;">Cannot be reduced or eliminated</div>
+<div class="t" id="s2-pill-s" style="left:360px;top:950px;width:1200px;text-align:center;font-size:38px;color:rgba(8,36,58,0.74);font-weight:400;">for a first acquisition</div>
+</div>
+</div>
+<script>
+(function() {
+const tl = gsap.timeline({ paused: true });
+const D = 12.24;
+tl.fromTo('#s2-wrap', { opacity: 0 }, { opacity: 1, duration: 0.25, ease: 'power2.out' }, 0);
+tl.to('#s2-wrap', { opacity: 0, duration: 0.2, ease: 'power2.in' }, D - 0.2);
+tl.fromTo('#s2-ttl', { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, 0.250);
+tl.fromTo('#s2-eq', { opacity: 0 }, { opacity: 1, duration: 0.4, ease: 'power2.out' }, 1.530);
+tl.fromTo('#s2-big', { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 1.530);
+tl.fromTo('#s2-lead', { strokeDashoffset: 1100 }, { strokeDashoffset: 0, duration: 0.4, ease: 'power2.out' }, 1.730);
+tl.fromTo('#s2-brk-svg', { opacity: 0 }, { opacity: 1, duration: 0.5, ease: 'power2.out' }, 2.550);
+tl.fromTo('#s2-brk', { strokeDashoffset: 1100 }, { strokeDashoffset: 0, duration: 0.6, ease: 'power2.out' }, 2.550);
+tl.fromTo('#s2-brk-t', { opacity: 0 }, { opacity: 1, duration: 0.5, ease: 'power2.out' }, 2.750);
+tl.fromTo('#s2-big-l', { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 7.170);
+tl.fromTo('#s2-loan', { scaleX: 0 }, { scaleX: 1, duration: 0.8, ease: 'power2.out' }, 5.290);
+tl.fromTo('#s2-loan-t', { opacity: 0 }, { opacity: 1, duration: 0.5, ease: 'power2.out' }, 5.890);
+tl.fromTo('#s2-pill', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 9.990);
+tl.fromTo('#s2-pill-t', { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 10.090);
+tl.fromTo('#s2-pill-s', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 8.750);
+window.__timelines['s2'] = tl;
+})();
+</script>
+</template>

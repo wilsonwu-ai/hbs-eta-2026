@@ -1,0 +1,67 @@
+<figure class="fig" id="fig-sba-rules" aria-labelledby="fig-sba-rules-t">
+<style>
+#fig-sba-rules svg { display: block; width: 100%; height: auto; max-width: 480px; margin: 0 auto; font-family: inherit; }
+#fig-sba-rules text { font-family: inherit; font-size: 14px; }
+#fig-sba-rules .col { fill: var(--w-navy); font-weight: 700; }
+#fig-sba-rules .row-t { fill: var(--w-ink); font-weight: 700; }
+#fig-sba-rules .old-box { fill: var(--w-surface); stroke: var(--w-line-strong); stroke-width: 1.5; }
+#fig-sba-rules .new-box { fill: var(--w-accent-tint); stroke: var(--w-accent); stroke-width: 1.5; }
+#fig-sba-rules .old-t { fill: var(--w-muted); }
+#fig-sba-rules .new-t { fill: var(--w-ink); }
+#fig-sba-rules .big { font-size: 18px; font-weight: 700; }
+#fig-sba-rules .b { font-weight: 700; }
+#fig-sba-rules .arrow { stroke: var(--w-accent); stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+#fig-sba-rules .ban { fill: var(--w-navy-tint); stroke: var(--w-navy); stroke-width: 1.5; }
+#fig-sba-rules .ban-t { fill: var(--w-ink); }
+</style>
+<p class="fig-title" id="fig-sba-rules-t">Since 1 October 2026, lenders look harder at cash flow and at seller notes.</p>
+<p class="fig-sub">Read each row from the old rule to the new one. These rules apply to loans that get an SBA loan number on or after 1 October 2026. DSCR is how many times the business's cash flow covers its loan payments. Full standby means no payments to the seller while the SBA loan lasts.</p>
+<svg viewBox="0 0 360 464" role="img" aria-label="Old rules compared with the new SBA rules. Cash flow cushion, the DSCR minimum for buying a business: 1.15x before, 1.25x now, and projections cannot be used. Seller note above the 10% down payment: before, a 12 to 24 month standby was enough at many lenders; now it must be on full standby for the life of the loan or it counts in the DSCR test. Seller help after the sale: up to 12 months before, up to 24 months now. Also new: at a price of $3M or more, the lender must order a quality of earnings report.">
+
+  <text class="col" x="78" y="22" text-anchor="middle">Before</text>
+  <text class="col" x="282" y="22" text-anchor="middle">Now</text>
+
+  <!-- Row 1: DSCR -->
+  <text class="row-t" x="8" y="50">Cash flow cushion (DSCR)</text>
+  <rect class="old-box" x="8" y="58" width="140" height="74" rx="6"/>
+  <text class="old-t big" x="78" y="85" text-anchor="middle">1.15x</text>
+  <text class="old-t" x="78" y="103" text-anchor="middle">minimum</text>
+  <text class="old-t" x="78" y="121" text-anchor="middle">for a purchase</text>
+  <path class="arrow" d="M160 95 H198 M188 85 L199 95 L188 105"/>
+  <rect class="new-box" x="212" y="58" width="140" height="74" rx="6"/>
+  <text class="new-t big" x="282" y="85" text-anchor="middle">1.25x</text>
+  <text class="new-t" x="282" y="103" text-anchor="middle">minimum</text>
+  <text class="new-t" x="282" y="121" text-anchor="middle">no projections</text>
+
+  <!-- Row 2: seller note above the 10% -->
+  <text class="row-t" x="8" y="162">Seller note above the 10%</text>
+  <rect class="old-box" x="8" y="170" width="140" height="74" rx="6"/>
+  <text class="old-t" x="78" y="193" text-anchor="middle">Short standby,</text>
+  <text class="old-t" x="78" y="211" text-anchor="middle">12 to 24 months,</text>
+  <text class="old-t" x="78" y="229" text-anchor="middle">at many lenders</text>
+  <path class="arrow" d="M160 207 H198 M188 197 L199 207 L188 217"/>
+  <rect class="new-box" x="212" y="170" width="140" height="74" rx="6"/>
+  <text class="new-t b" x="282" y="193" text-anchor="middle">Full standby,</text>
+  <text class="new-t" x="282" y="211" text-anchor="middle">or it counts in</text>
+  <text class="new-t" x="282" y="229" text-anchor="middle">the DSCR test</text>
+
+  <!-- Row 3: seller consulting -->
+  <text class="row-t" x="8" y="274">Seller helps after the sale</text>
+  <rect class="old-box" x="8" y="282" width="140" height="74" rx="6"/>
+  <text class="old-t" x="78" y="305" text-anchor="middle">Up to</text>
+  <text class="old-t" x="78" y="323" text-anchor="middle">12 months</text>
+  <text class="old-t" x="78" y="341" text-anchor="middle">of consulting</text>
+  <path class="arrow" d="M160 319 H198 M188 309 L199 319 L188 329"/>
+  <rect class="new-box" x="212" y="282" width="140" height="74" rx="6"/>
+  <text class="new-t" x="282" y="305" text-anchor="middle">Up to</text>
+  <text class="new-t b" x="282" y="323" text-anchor="middle">24 months</text>
+  <text class="new-t" x="282" y="341" text-anchor="middle">of consulting</text>
+
+  <!-- New-only banner -->
+  <rect class="ban" x="8" y="372" width="344" height="82" rx="6"/>
+  <text class="ban-t b" x="180" y="395" text-anchor="middle">Also new, at a price of $3M or more:</text>
+  <text class="ban-t" x="180" y="415" text-anchor="middle">the lender must order a QoE,</text>
+  <text class="ban-t" x="180" y="435" text-anchor="middle">a quality of earnings report.</text>
+</svg>
+<figcaption>The DSCR, consulting and QoE changes come from law-firm and lender summaries of SOP 50 10 8.1, not the SBA text itself: <a href="https://starfieldsmith.com/2026/09/best-practices-change-of-ownership-transactions-under-sop-50-10-8-1-what-sba-lenders-need-to-know/">Starfield &amp; Smith</a> (9 Sep 2026) and <a href="https://beancount.io/blog/2026/09/23/sba-sop-50-10-8-1-change-of-ownership-equity-dscr-qoe-guide">Beancount.io</a> (23 Sep 2026). The effective date is in <a href="https://legacy.sba.gov/document/information-notice-5000-880695-issuance-sop-50-10-81">SBA Information Notice 5000-880695</a>. The seller note row is from Brendan O'Brien, a lender on the panel, who said many but not all lenders accepted a 12 to 24 month standby before 1 October. Confirm with your lender.</figcaption>
+</figure>

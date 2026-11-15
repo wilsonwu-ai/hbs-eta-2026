@@ -1,0 +1,19 @@
+<template>
+<style>@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap');
+#root { position:absolute; inset:0; font-family:'Libre Franklin',sans-serif; color:#08243A; overflow:hidden; }
+#root .wm { position:absolute; right:80px; top:44px; font-size:30px; font-weight:700; letter-spacing:0.34em; text-transform:uppercase; white-space:nowrap; color:#08243A; }
+#root .cr { position:absolute; left:80px; bottom:34px; font-size:30px; font-weight:400; white-space:nowrap; color:#08243A; }
+</style>
+<div id="root" data-composition-id="chrome" data-width="1920" data-height="1080">
+<div class="wm" id="chrome-wm">Dubbs Capital</div>
+<div class="cr" id="chrome-cr">Notes from the HBS ETA Conference 2026</div>
+</div>
+<script>
+(function() {
+const tl = gsap.timeline({ paused: true });
+tl.set('#chrome-wm', { opacity: 1 }, 0);
+tl.set('#chrome-cr', { opacity: 1 }, 0);
+window.__timelines['chrome'] = tl;
+})();
+</script>
+</template>
