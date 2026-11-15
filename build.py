@@ -13,7 +13,7 @@ Body markers (each on its own line):
   <!-- MOTION:name -->                 alias of FIG for animated partials
 Sources: content/<slug>.sources.json = [{"org","title","url","date"}]. Every external link in the page must be listed.
 """
-import json, re, sys
+import hashlib, json, re, sys
 from pathlib import Path
 import markdown
 
@@ -45,6 +45,10 @@ def load(p):
         fail(f"{p.name}: banned word '{mm.group(0)}' (attended, never recorded)")
     return meta, body
 
+def ver(p):
+    """Short content hash for a media URL, so a replaced video or poster is never served from a stale cache."""
+    return hashlib.sha1(p.read_bytes()).hexdigest()[:8] if p.exists() else "0"
+
 def marker(kind, arg, slug):
     if kind in ("FIG", "MOTION"):
         f = T / "figures" / f"{arg.strip()}.html"
@@ -63,10 +67,10 @@ def marker(kind, arg, slug):
     cap, _, opt = cap.partition("|")
     cls = "video portrait" if opt.strip() == "portrait" else "video"
     if not (D / "media" / file).exists(): fail(f"{slug}: video {file} missing")
-    poster = f' poster="media/{stem}.jpg"' if (D / "media" / f"{stem}.jpg").exists() else ""
+    poster = f' poster="media/{stem}.jpg?v={ver(D / "media" / f"{stem}.jpg")}"' if (D / "media" / f"{stem}.jpg").exists() else ""
     track = f'<track kind="captions" src="media/{stem}.vtt" srclang="en" label="English" default>' if (D / "media" / f"{stem}.vtt").exists() else ""
     return (f'<figure class="{cls}"><video controls preload="metadata" playsinline{poster}>'
-            f'<source src="media/{file}" type="video/mp4">{track}</video><figcaption>{cap.strip()}</figcaption></figure>')
+            f'<source src="media/{file}?v={ver(D / "media" / file)}" type="video/mp4">{track}</video><figcaption>{cap.strip()}</figcaption></figure>')
 
 def main():
     pages = []
