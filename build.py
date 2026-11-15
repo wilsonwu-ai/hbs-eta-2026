@@ -8,7 +8,8 @@ Each content/<slug>.md starts with a JSON front-matter block between lines '---'
 Body markers (each on its own line):
   <!-- FIG:name -->                    templates/figures/name.html (SVG or HTML+JS partial)
   <!-- IMG:file.jpg|caption -->        a photo from docs/img
-  <!-- VIDEO:file.mp4|caption -->      docs/media/file.mp4 (+ file.vtt captions, file.jpg poster if present)
+  <!-- VIDEO:file.mp4|caption -->      docs/media/file.mp4 (+ file.vtt captions, file.jpg poster if present);
+                                       add |portrait for a 9:16 video (height-capped, centred)
   <!-- MOTION:name -->                 alias of FIG for animated partials
 Sources: content/<slug>.sources.json = [{"org","title","url","date"}]. Every external link in the page must be listed.
 """
@@ -59,10 +60,12 @@ def marker(kind, arg, slug):
         if not (D / "img" / file).exists(): fail(f"{slug}: image {file} missing")
         return f'<figure class="photo"><img src="img/{file}?v=4k" alt="{cap.strip()}" loading="lazy"><figcaption>{cap.strip()}</figcaption></figure>'
     stem = file.rsplit(".", 1)[0]
+    cap, _, opt = cap.partition("|")
+    cls = "video portrait" if opt.strip() == "portrait" else "video"
     if not (D / "media" / file).exists(): fail(f"{slug}: video {file} missing")
     poster = f' poster="media/{stem}.jpg"' if (D / "media" / f"{stem}.jpg").exists() else ""
     track = f'<track kind="captions" src="media/{stem}.vtt" srclang="en" label="English" default>' if (D / "media" / f"{stem}.vtt").exists() else ""
-    return (f'<figure class="video"><video controls preload="metadata" playsinline{poster}>'
+    return (f'<figure class="{cls}"><video controls preload="metadata" playsinline{poster}>'
             f'<source src="media/{file}" type="video/mp4">{track}</video><figcaption>{cap.strip()}</figcaption></figure>')
 
 def main():

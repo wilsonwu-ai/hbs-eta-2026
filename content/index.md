@@ -15,6 +15,8 @@ I spent Saturday 14 November 2026 at Harvard Business School, and I left with on
 
 This page is the overview. It sums up the day and links to four deeper pages, one for each session I attended. I am an operator searching for a small business to buy, and I am still learning, so please read this as a student's notes and not as expert advice.
 
+<!-- VIDEO:hbs-eta-short.mp4|The day in under a minute, narrated in an AI clone of my own voice.|portrait -->
+
 <!-- FIG:overview-star -->
 
 ## Where I was sitting
