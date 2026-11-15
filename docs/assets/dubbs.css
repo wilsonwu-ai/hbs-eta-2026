@@ -1,0 +1,43 @@
+/* dubbs.css: Dubbs Capital web design layer for this series (15 Nov 2026).
+   Mirrors dubbscapital.com/css/base.css: white pages, black text, a small amount of navy,
+   rules instead of shaded cards, Libre Franklin Regular 400 and Bold 700 only.
+   Fonts: fonts/libre-franklin (unmodified upstream files, SIL Open Font License 1.1, see OFL.txt).
+   The --w-* names are kept so the figure partials (templates/figures) re-skin without edits.
+   Solid values are the navy and black tints of the dubbscapital.com tokens, flattened on white.
+   White only: no dark theme, as on dubbscapital.com. */
+@font-face{font-family:"Libre Franklin";src:url("fonts/libre-franklin/regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Libre Franklin";src:url("fonts/libre-franklin/bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+
+:root{
+  color-scheme:light;
+  --navy:#08243A;--black:#000000;--white:#FFFFFF;
+  --navy-70:rgb(8 36 58 / .7);--navy-40:rgb(8 36 58 / .4);--navy-20:rgb(8 36 58 / .2);--navy-08:rgb(8 36 58 / .08);
+  --black-70:rgb(0 0 0 / .7);--white-72:rgb(255 255 255 / .72);--white-20:rgb(255 255 255 / .2);
+  --font:"Libre Franklin",Arial,sans-serif;
+  --fs-h1:clamp(36px,4.4vw,56px);--fs-h2:clamp(26px,2.6vw,34px);--fs-h3:clamp(19px,1.6vw,22px);
+  --fs-body:clamp(17px,1.25vw,18px);--fs-lead:clamp(19px,1.6vw,23px);--fs-small:14px;--fs-label:13px;--ls-label:.08em;
+  --header-height:76px;--margin:clamp(20px,5.5vw,80px);--maxw:1200px;--measure:68ch;
+
+  /* Figure and site tokens (legacy names, Dubbs values). */
+  --w-font:var(--font);
+  --w-navy:#08243A;--w-navy-fill:#08243A;--w-ink:#000000;--w-paper:#FFFFFF;--w-surface:#FFFFFF;
+  --w-line:#CED3D8;        /* navy 20% */
+  --w-line-strong:#526675; /* navy 70%: axes, control borders (3:1+) */
+  --w-muted:#4D4D4D;       /* black 70% */
+  --w-accent:#526675;      /* second series = navy 70%, so stacks still read as separate blocks */
+  --w-accent-2:#000000;--w-positive:#08243A;--w-negative:#000000;--w-caution:#000000;
+  --w-navy-tint:#EBEEEF;   /* navy 8% */
+  --w-accent-tint:#DCE0E3; /* navy 14% */
+  --w-negative-tint:#EBEEEF;--w-positive-tint:#EBEEEF;--w-caution-tint:#EBEEEF;
+  --w-d1:#08243A;--w-d2:#526675;--w-d3:#9CA7B0;--w-d4:#000000;--w-d5:#2F4859;--w-d6:#7D8B96;--w-d0:#9CA7B0;
+  --w-keel-navy:#08243A;--w-keel-copper:#08243A;
+}
+
+html{font-synthesis:style;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;scroll-padding-top:calc(var(--header-height) + 10px);background:#FFFFFF}
+body{margin:0;background:#FFFFFF;color:#000000;font-family:var(--font);font-size:var(--fs-body);line-height:1.55;font-variant-numeric:lining-nums tabular-nums;overflow-x:clip}
+::selection{background:var(--navy);color:#FFFFFF}
+:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+a{color:inherit;text-underline-offset:5px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+strong,b{font-weight:700}
+button,input,select,textarea{font:inherit;color:inherit}

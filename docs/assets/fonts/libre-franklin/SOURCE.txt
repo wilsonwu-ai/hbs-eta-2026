@@ -1,0 +1,4 @@
+Libre Franklin v3.000, Regular 400 and Bold 700.
+Source: https://github.com/impallari/Libre-Franklin
+Commit: 5e76d2f48045806a2d6827622df023aec97cd59e
+Unmodified upstream files; SIL Open Font License 1.1, see OFL.txt.
