@@ -61,7 +61,7 @@ Beyond the injection, the law-firm summaries I read list other changes in 8.1 ([
 
 ### Topic 2: Seller notes
 
-A seller note is a loan from the person selling you the business. Instead of paying the full price at closing, the seller agrees to be paid back over time. Three points mattered here.
+A seller note is a loan from the person selling you the business. Instead of paying the full price at closing, the seller agrees to be paid back over time. Four points mattered here.
 
 **Point 1: inside the 10%, the note must sit on full standby.** O'Brien said a 5% seller note that counts toward your 10% has to stay on full standby for the life of the SBA loan. He called it a government rule. Why it matters: you cannot promise the seller steady payments on that slice.
 
@@ -74,6 +74,8 @@ A seller note is a loan from the person selling you the business. Instead of pay
 </div>
 
 **Point 3: a tool in the negotiation.** O'Brien predicted this will push purchase prices down, and he framed it as good for buyers. A buyer can tell a seller the bank will not lend at that price. He also said lenders order their own outside valuation. If the value comes in under the price, the gap has to be filled by equity or by a full-standby note. He gave an example: a business valued at $6M with a $7M ask leaves a $1M gap. His advice to buyers was not to fill that gap with their own equity, since the business is not worth it. Why it matters: the rule gives a searcher a polite, neutral reason to say the price does not work.
+
+**Point 4: why a seller might agree to wait.** Full standby is a lot to ask: the seller gets no payments on that slice until the bank is repaid. Two answers came up. O'Brien said an SBA loan with no real estate in it has a 10-year term (confirm with your lender), and that a buyer probably will not keep the loan that long, so the wait may be shorter than it sounds. Later, in a quick round, one panelist said seller financing is now expected and is usually already counted in the price. In that panelist's view, the seller is mostly thinking about the cash paid at closing and treats the note as extra, and some owners who sell late in life are not planning around a payment that far off. Why it matters: it suggests the number a seller will defend is the cash at closing, and it is a reason to test the price against what the business earns before treating the note as a favor. That was one person's view of most deals, not all of them. I would not count on it: a seller who needs the full price may well say no, and the note is still money the business owes.
 
 Leigh added the legal side. A seller note can give the buyer a right to offset, meaning to hold back payments if the seller owes the buyer for a problem found after closing. Leigh said that offsetting against a seller note you are not yet paying does not always help, for example on a litigation claim, so escrows matter for real claims. An escrow, also called a holdback, is part of the price set aside to cover such problems. He also described a case where the lender raised a non-compete issue (a promise by the seller not to start a rival business) only after the letter of intent (the LOI, the short document where buyer and seller agree on the main terms). His lesson: bring bankers and lawyers in before the LOI, not after.
 
